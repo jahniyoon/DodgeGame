@@ -15,6 +15,18 @@ public class PlayerControler : MonoBehaviour
     {
         playerRigid = transform.GetComponent<Rigidbody>();
         // 내 컨트롤러에 달린 트랜스폼을 가져온다.
+
+        //playerRigid = null;
+
+        Debug.Assert(playerRigid != null);
+
+        if (playerRigid == null)
+        {
+            Debug.LogError("Player 의 RigidBody 컴포넌트를 찾을 수 없습니다.");
+        }
+
+        GFunc.Log("이게 잘 찍힐까?");
+
     }
 
     // Update is called once per frame
